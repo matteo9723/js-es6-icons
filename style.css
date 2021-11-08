@@ -5,6 +5,10 @@ box-sizing: border-box;
 font-family: 'Acme', sans-serif;
 }
 
+.title{
+  height: 50px;
+}
+
 h1{
   font-family: 'Acme', sans-serif;
   margin: 0 10px;
@@ -17,24 +21,27 @@ header{
   background-color: #29B1DD;
   padding: 20PX;
   color: white;
+  height: 60px;
 }
 
 header select{
   margin: 0 10px;
+  height: 30px;
 }
 
 main{
   background-color: #DDDDDD;
   /* filter: drop-shadow(8px 8px 10px black); */
   padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  height: calc(100vh - 110px);
+  width: 100%;
+  
 }
 
 .card{
+  float: left;
   height: 80px;
-  width: 200px;
+  width: calc(100% / 5 - 40px);
   border: 1px solid black;
   border-radius:10px ;
   display: flex;
@@ -43,6 +50,7 @@ main{
   justify-content: center;
   background-color: white;
   margin: 20px 20px;
+  
 }
 
 .text{
@@ -64,3 +72,4 @@ i{
 .blue{
   color: blue;
 }
+

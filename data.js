@@ -134,17 +134,17 @@ for(let i in arr){
 
 
 let select=document.getElementById('select');
-let enter = false;
+
 
 select.addEventListener('click',function(){
 	
+	main.innerHTML = '';
 	let valoreSelect = document.getElementById("select").value;
-
 	// ANIMAL 
 	
-	if(valoreSelect == 'animal' && enter == false){
+	if(valoreSelect == 'animal' ){
 		const selezione = arr.filter((x)=>{
-			enter=true;
+			
 			return x.type == 'animal';
 		});
 		for(let i in selezione){
@@ -159,9 +159,9 @@ select.addEventListener('click',function(){
 
 	// VEGETABLE
 
-	if(valoreSelect == 'vegetable' && enter == false){
+	if(valoreSelect == 'vegetable' ){
 		const selezione = arr.filter((x)=>{
-			enter=true;
+			
 			return x.type == 'vegetable';
 		});
 		for(let i in selezione){
@@ -176,9 +176,9 @@ select.addEventListener('click',function(){
 
 	// USER 
 
-	if(valoreSelect == 'user' && enter == false){
+	if(valoreSelect == 'user' ){
 		const selezione = arr.filter((x)=>{
-			enter=true;
+			
 			return x.type == 'user';
 		});
 		for(let i in selezione){
@@ -187,6 +187,17 @@ select.addEventListener('click',function(){
 			<div class="card">
 			<i class="${selezione[i].family} ${selezione[i].prefix}${selezione[i].name} ${selezione[i].color}"></i>
 			<div class="text "> ${selezione[i].name} </div>
+			</div>`;
+		}
+	}
+
+	if(valoreSelect == 'all' ){
+		for(let i in arr){
+
+			main.innerHTML+=`
+			<div class="card">
+			<i class="${arr[i].family} ${arr[i].prefix}${arr[i].name} ${arr[i].color}"></i>
+			<div class="text "> ${arr[i].name} </div>
 			</div>`;
 		}
 	}
