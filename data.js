@@ -114,15 +114,10 @@ const arr = [
 ];
 
 let main = document.getElementById('main');
-console.log(main);
+let select=document.getElementById('select');
 
+// tutte le tessere di default 
 
-
-// main.innerHTML=`
-// <div class="card">
-// <i class="${arr[0].family} ${arr[0].prefix}${arr[0].name} ${arr[0].color}"></i>
-// <div class="text "> ${arr[0].name} </div>
-// </div>`;
 for(let i in arr){
 
 	main.innerHTML+=`
@@ -133,13 +128,13 @@ for(let i in arr){
 }
 
 
-let select=document.getElementById('select');
-
-
 select.addEventListener('click',function(){
 	
+	// reset 
 	main.innerHTML = '';
+
 	let valoreSelect = document.getElementById("select").value;
+
 	// ANIMAL 
 	
 	if(valoreSelect == 'animal' ){
