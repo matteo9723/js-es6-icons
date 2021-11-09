@@ -31,7 +31,6 @@ header select{
 
 main{
   background-color: #DDDDDD;
-  /* filter: drop-shadow(8px 8px 10px black); */
   padding: 20px;
   height: calc(100vh - 110px);
   width: 100%;
@@ -41,7 +40,6 @@ main{
   float: left;
   height: 80px;
   width: calc(100% / 5 - 40px);
-  border: 1px solid black;
   border-radius:10px ;
   display: flex;
   flex-direction: column;
@@ -49,7 +47,7 @@ main{
   justify-content: center;
   background-color: white;
   margin: 20px 20px;
-  
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, .3);
 }
 
 .text{

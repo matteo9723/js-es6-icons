@@ -119,7 +119,6 @@ let select=document.getElementById('select');
 // tutte le tessere di default 
 
 for(let i in arr){
-
 	main.innerHTML+=`
 	<div class="card">
 	<i class="${arr[i].family} ${arr[i].prefix}${arr[i].name} ${arr[i].color}"></i>
